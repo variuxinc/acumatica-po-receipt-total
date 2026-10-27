@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  VxReceiptTotalCost: shows the Total Cost box on Purchase Receipts (PO302000).
+  Copyright 2026 Variux, Inc. Licensed under the Apache License, Version 2.0 (see LICENSE and NOTICE).
+
+  Contents: one DAC attribute override, and (pending) one screen layout change.
+  This file deliberately carries no pageSource snapshot of PO302000.aspx: that
+  markup belongs to Acumatica and is not redistributed here. Acumatica's editor
+  writes a pageSource attribute on every Page item; whether a Page item imports
+  without it is being confirmed. Until then the Page element below is a
+  placeholder and the layout change is a documented manual step (README).
+-->
+<Customization level="" description="Shows the Total Cost box on Purchase Receipts (PO302000). Variux, Apache-2.0." product-version="25.201">
+    <DAC type="PX.Objects.PO.POReceipt">
+        <Field FieldName="CuryOrderTotal" TypeName="decimal" TextAttributes="#CDATA" OverrideClassName="PX.Objects.PO.POReceipt" StorageName="ExistingColumn">
+            <CDATA name="TextAttributes"><![CDATA[
+[PXCustomizeBaseAttribute(typeof(PXUIFieldAttribute), "Visible", true)]]]></CDATA>
+        </Field>
+    </DAC>
+    <!--
+    PLACEHOLDER, not yet valid. Replace with the Page element exported from a
+    clean 2025 R2 tenant after setting Layout Properties > Visible = True on
+    edCuryOrderTotal, then delete its pageSource attribute. Expected shape
+    (ParentId, ControlId and TypeFullName values unconfirmed):
+
+    <Page path="~/pages/po/po302000.aspx">
+        <PXNumberEdit ID="edCuryOrderTotal" ParentId="(from export)" TypeFullName="PX.Web.UI.PXNumberEdit">
+            <Prop Key="Visible" Value="True" />
+        </PXNumberEdit>
+    </Page>
+    -->
+</Customization>
