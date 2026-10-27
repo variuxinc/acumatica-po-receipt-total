@@ -1,4 +1,4 @@
-# VxReceiptTotalCost
+# VxPOReceiptTotal
 
 ```
                  o               o

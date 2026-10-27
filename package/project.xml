@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  VxReceiptTotalCost: shows the Total Cost box on Purchase Receipts (PO302000).
+  VxPOReceiptTotal: shows the Total Cost box on Purchase Receipts (PO302000).
   Copyright 2026 Variux, Inc. Licensed under the Apache License, Version 2.0 (see LICENSE and NOTICE).
 
   Contents: one DAC attribute override, and (pending) one screen layout change.
